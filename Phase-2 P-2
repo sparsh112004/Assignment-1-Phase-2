@@ -1,0 +1,25 @@
+
+def get_name():
+    name = input("Enter your name: ")
+    return name
+def get_tshirt(brand_name):
+    a = '"Hi '
+    b = ', the brand you are looking for is available in store, but the size ' + size + ' is not available,"'
+    c = ', the brand you are looking for is available in store in size ' + size + ' ,"'
+    d = ', Unfortunately the brand you are looking for is not available in store ,"'
+    available_brands = ["Allen Solly", "Peter England", "Spykar", "Adidas", "Nike"]
+    available_sizes = ["S", "M", "L"]
+    if brand_name in available_brands:
+        if size in available_sizes:
+            greeting = a + n + c 
+            return greeting
+        else:
+            greeting = a + n + b 
+            return greeting
+    else:
+        greeting = a + n + d
+        return greeting
+n = get_name()
+brand_name = input("Enter the brand you are looking for: ")
+size =input("Which size you want: ")    
+print(get_tshirt(brand_name))
